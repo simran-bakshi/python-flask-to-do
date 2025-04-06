@@ -1,0 +1,17 @@
+# Ignore Python bytecode
+_pycache_/
+*.pyc
+
+# Ignore virtual environment
+env/
+venv/
+
+# Ignore SQLite database
+*.db
+
+# Ignore VS Code settings (optional but common)
+.vscode/
+
+# Ignore OS-specific files (optional)
+.DS_Store
+Thumbs.db
