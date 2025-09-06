@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime,timezone,timedelta
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///:memory:"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///mydatabase.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -70,8 +70,7 @@ def delete(sno):
    db.session.commit()
    return redirect("/")
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=8000)
+
 
 
 
